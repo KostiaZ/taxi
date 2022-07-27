@@ -1,0 +1,13 @@
+.nav{
+@include  flex-center ($horizontal: space-between);
+}
+
+.nav-menu {
+@include flex-center ($horizontal: space-between);   
+}
+
+.nav-menu__item {
+&:not(:first) {
+    margin-left: 30px;
+}
+}
