@@ -48,6 +48,7 @@ address {
 }
 
 body {
+    overflow: hidden;
     font-family: 'roboto', sans-serif;
     color: $font-color;
     background-color: $body-color;
