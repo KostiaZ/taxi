@@ -3,3 +3,7 @@
     align-items: $vertical;
     justify-content: $horizontal;
 }
+
+@mixin effect ($function: color) {
+    transition: $function .3s cubic-bezier(.22,.68,0,1.71);
+}

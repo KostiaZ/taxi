@@ -83,8 +83,8 @@ body {
 
 .section {
   margin: 0;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 48px;
+  padding-bottom: 48px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -102,6 +102,8 @@ body {
 @media screen and (min-width: 1200px) {
   .section {
     width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -112,7 +114,7 @@ body {
 .header__banner {
   margin-left: auto;
   margin-right: auto;
-  width: 1600px;
+  width: auto;
 }
 @media screen and (min-width: 480px) {
   .header__banner {
@@ -154,13 +156,46 @@ body {
           justify-content: space-between;
 }
 
-.nav-menu__item:not(:first) {
-  margin-left: 30px;
+.nav-menu__item {
+  margin-left: 10px;
+}
+@media screen and (min-width: 768px) {
+  .nav-menu__item:not(:first-child) {
+    margin-left: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav-menu__item:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+
+.nav-menu__link {
+  -webkit-transition: color 0.3s cubic-bezier(0.22, 0.68, 0, 1.71);
+  transition: color 0.3s cubic-bezier(0.22, 0.68, 0, 1.71);
+}
+.nav-menu__link:hover, .nav-menu__link:focus {
+  color: #00a3c8;
 }
 
 .logo {
   font-family: "raleway";
   font-weight: 700;
-  font-size: 48px;
+  font-size: 16px;
   color: #00a3c8;
+}
+@media screen and (min-width: 480px) {
+  .logo {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 48px;
+  }
 }/*# sourceMappingURL=main.css.map */
