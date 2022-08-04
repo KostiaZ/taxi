@@ -1,9 +1,13 @@
 .nav{
-@include  flex-center ($horizontal: space-between);
+    @include  flex-center ($horizontal: space-between);
+    min-height: 40px;
 }
 
 .nav-menu {
-@include flex-center ($horizontal: space-between);   
+    @include flex-center ($horizontal: space-between);   
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 }
 
 .nav-menu__item {
