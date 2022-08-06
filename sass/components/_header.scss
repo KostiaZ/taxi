@@ -1,22 +1,24 @@
 .header {
-    padding-top: 0;
-    padding-bottom: 5px;
-    background-color: $bg-color;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 5px;
+  background-color: $bg-color;
 }
 
 .header__banner {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    @media screen and (min-width: 480px) {
-        width: 480px;}
-        
-    @media screen and (min-width: 768px) {
-        width: 768px;
-    }
-    
-    @media screen and (min-width: 1200px) {
-        width: 1200px;
-    }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }

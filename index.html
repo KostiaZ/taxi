@@ -13,16 +13,41 @@
 <body>
     <header class="section header">
         <img class="header__banner" src="./images/banner.jpg" height="201px" alt="banner" />
-
         <div class="container ">
             <nav class="nav">
+
                 <a class="logo" href="./index.html" target="_parent">Taxi-express</a>
-                <button class="header__button" type="button">Контакти</button>
+                <button class="header__button" type="button" data-menu-button>
+                    <svg class="" width="20px" height="20px">
+                        <use class="" href="./images/icons.svg#icon-close"></use>
+                        <use class="" href="./images/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
+
                 <ul class="nav-menu">
-                    <li class="nav-menu__item"><a class="nav-menu__link" href="tel:+380965616030">+38 096 561 60 30</a>
+                    <li class="nav-menu__item"><a class="nav-menu__link" href="tel:+380965616030">
+                            <svg class="nav-menu__icon" width="20px" height="20px">
+                                <use href="./images/icons.svg#icon-smartphone"></use>
+                            </svg>
+                            +380965616030</a>
                     </li>
+                    <li class="nav-menu__item"><a class="nav-menu__link" href="mailto:admin@taxi-express.com.ua">
+                            <svg class="nav-menu__icon" width="20px" height="20px">
+                                <use href="./images/icons.svg#icon-envelope"></use>
+                            </svg>
+                            admin@taxi-express.com.ua</a></li>
                     <li class="nav-menu__item"><a class="nav-menu__link"
-                            href="mailto:admin@taxi-express.com.ua">admin@taxi-express.com.ua</a></li>
+                            href="https://www.instagram.com/taxi_express.com.ua/">
+                            <svg class="nav-menu__icon" width="20px" height="20px">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg>
+                            Instagam</a>
+                    </li>
+                    <li class="nav-menu__item"><a class="nav-menu__link" href="">
+                            <svg class="nav-menu__icon" width="20px" height="20px">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg>
+                            Facebook</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,8 +58,11 @@
                 <h1>Міжгороднє таксі "Експрес"</h1>
             </section>
             <Section>
-                <h2>Тільки у нас Ви зможете замовити таксі в любу точку України за самими вигідними цінами. До Ваших послуг
+                <h2>Тільки у нас Ви зможете замовити таксі у будь-яку точку України за самими вигідними цінами. До Ваших
+                    послуг
                     автомобілі стандарт та комфорт класу, в яких є все необхідне для комфортної подорожі.</h2>
+                <!--                 <button type="button" class="order__button" data-modal-open>Заказать услугу</button>
+ -->
             </Section>
             <section>
                 <h2 hidden>#</h2>
@@ -103,13 +131,76 @@
                         </tr>
                     </tbody>
                 </table>
-                <p>Кінцеву ціну маршруту можна дізнатися за допомогою форми замовлення, де Ви зможете обрати початкову та кінцеву адресу, а також клас авто.</p>
+                <p>Кінцеву ціну маршруту можна дізнатися за допомогою форми замовлення, де Ви зможете обрати початкову
+                    та кінцеву адресу, а також клас авто.</p>
             </section>
         </div>
     </main>
     <footer class="section footer">
 
     </footer>
+
+    <!-- Бэкдроп и модальное окно -->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal__close" type="button" data-modal-close>
+                <svg class="modal__close-icon" width="20px" height="20px">
+                    <use href="./images/icons.svg#icon-close-black"></use>
+                </svg>
+            </button>
+            <h2 class="modal__title">Оставьте свои данные, мы вам перезвоним</h2>
+            <form class="order-form" autocomplete="on">
+                <div class="order-form__field">
+                    <label for="name" class="order-form__label">Имя</label>
+                    <div class="order-form__position">
+                        <input type="text" id="name" class="order-form__input">
+                        <svg class="order-form__icon" width="18px" height="18px">
+                            <use href="./images/icons.svg#icon-person-black"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="order-form__field">
+                    <label for="tel" class="order-form__label">Телефон</label>
+                    <div class="order-form__position">
+                        <input type="tel" id="tel" class="order-form__input">
+                        <svg class="order-form__icon" width="18px" height="18px">
+                            <use href="./images/icons.svg#icon-phone-black"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="order-form__field">
+                    <label for="email" class="order-form__label">Почта</label>
+                    <div class="order-form__position">
+                        <input type="email" id="email" class="order-form__input">
+                        <svg class="order-form__icon" width="18px" height="18px">
+                            <use href="./images/icons.svg#icon-email-black"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="order-form__textarea">
+                    <label for="comment" class="order-form__label">Комментарий</label>
+                    <textarea class="order-form__textarea-input" name="comment" id="comment"
+                        placeholder="Введите текст"></textarea>
+                </div>
+                <div class="policy">
+                    <label for="policy" class="policy__input">
+                        <div class="policy__check">
+                            <input type="checkbox" id="policy" class="policy__checkbox visually-hidden">
+                            <svg width="16" height="15" class="policy__icon" aria-hidden="true">
+                                <use href="./images/icons.svg#icon-check"></use>
+                            </svg>
+                        </div>
+                        <p class="policy__terms">Соглашаюсь с рассылкой и принимаю <a class="policy__link"
+                                href="">Условия
+                                договора</a></p>
+                    </label>
+                    </input>
+                </div>
+                <button class="order-form__button-submit" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>

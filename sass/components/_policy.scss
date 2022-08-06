@@ -1,0 +1,43 @@
+.policy {
+  @include flexCenter();
+  margin-bottom: 30px;
+}
+
+.policy__input {
+  @include flexCenter();
+  margin-left: 7px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.policy__check {
+  @include flexCenter();
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+}
+
+.policy__checkbox {
+  position: absolute;
+}
+
+.policy__icon {
+  opacity: 0;
+  flex-shrink: 0;
+  @include effect(opacity);
+  background-color: $accent;
+  border-radius: 2px;
+}
+
+.policy__checkbox:checked ~ .policy__icon {
+  opacity: 1;
+}
+
+.policy__terms {
+  padding-left: 7px;
+}
+
+.policy__link {
+  color: $accent;
+}

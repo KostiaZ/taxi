@@ -1,9 +1,14 @@
-@import "./utils/variables";
-@import "./utils/mixins";
-@import "./utils/base";
-@import "./utils/buttons";
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/base';
+@import './utils/buttons';
 
-@import "./components/header";
-@import "./components/nav";
-@import "./components/logo";
-@import "./components/footer";
+@import './components/header';
+@import './components/menu';
+@import './components/nav';
+@import './components/logo';
+@import './components/footer';
+@import './components/backdrop';
+@import './components/modal';
+@import './components/order-form';
+@import './components/policy';
