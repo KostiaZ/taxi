@@ -5,5 +5,5 @@
 }
 
 @mixin effect($function: color) {
-  transition: $function 0.3s cubic-bezier(0.22, 0.68, 0, 1.71);
+  transition: $function .3s cubic-bezier(0.22, 0.68, 0, 1.71);
 }
