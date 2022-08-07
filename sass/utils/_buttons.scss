@@ -1,6 +1,7 @@
 .header__button {
   background-color: transparent;
   border: 0;
+  cursor: pointer;
   @include effect;
 
   &:hover,
@@ -16,6 +17,7 @@
 .request-button {
   border: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .modal__close {
@@ -40,7 +42,18 @@
   }
 }
 
-.request__button,
+.request__button {
+  border: 0;
+  background-color: $accent;
+  @include effect();
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $table-text-hover;
+  }
+}
+
 .request__button-submit {
   display: block;
   margin: auto;
@@ -57,10 +70,6 @@
   border-radius: 4px;
   border: 0;
   background-color: $accent;
+  cursor: pointer;
   @include effect(background-color);
-
-  &:hover,
-  &:focus {
-    background-color: $accent;
-  }
 }
