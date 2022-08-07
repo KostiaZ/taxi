@@ -1,27 +1,27 @@
-.order-form {
+.request {
   width: 448px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.order-form__field {
+.request__field {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-.order-form__label {
+.request__label {
   margin-bottom: 4px;
   font-size: 12px;
 }
 
-.order-form__position {
+.request__position {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.order-form__input {
+.request__input {
   margin: 0;
   padding: 12px 42px;
   height: 40px;
@@ -29,33 +29,35 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   @include effect(border-color);
   border-radius: 4px;
+
   &:focus-visible,
-  .order-form__position:hover &,
-  .order-form__position:focus & {
+  .request__position:hover &,
+  .request__position:focus & {
     border-color: $accent;
   }
 }
 
-.order-form__icon {
+.request__icon {
   position: absolute;
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
   @include effect(fill);
-  .order-form__position:hover &,
-  .order-form__position:focus &,
-  .order-form__input:focus-visible + & {
+
+  .request__position:hover &,
+  .request__position:focus &,
+  .request__input:focus-visible+& {
     fill: $accent;
   }
 }
 
-.order-form__textarea {
+.request__textarea {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-.order-form__textarea-input {
+.request__textarea-input {
   resize: none;
   margin: 0;
   padding: 12px 16px;
@@ -64,11 +66,13 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   @include effect(border-color);
   border-radius: 4px;
+
   &:hover,
   &:focus,
   &:focus-visible {
     border-color: $accent;
   }
+
   &::placeholder {
     line-height: 1.14;
     letter-spacing: 0.01em;

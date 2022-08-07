@@ -61,12 +61,10 @@
                 <h2>Тільки у нас Ви зможете замовити таксі у будь-яку точку України за самими вигідними цінами. До Ваших
                     послуг
                     автомобілі стандарт та комфорт класу, в яких є все необхідне для комфортної подорожі.</h2>
-                <button type="button" class="order__button" data-modal-open>Заказать услугу</button>
             </section>
 
             <section class="section section-table">
                 <h2 hidden>#</h2>
-
                 <table class="table">
                     <caption>Приклади розрахунку приблизних цін на деякі популярні маршрути:</caption>
                     <tr>
@@ -129,11 +127,17 @@
                         </tr>
                     </tbody>
                 </table>
-            </section>
-            <section class="section">
-                <p>Кінцеву ціну маршруту можна дізнатися за допомогою форми замовлення, де Ви зможете обрати початкову
-                    та кінцеву адресу, а також клас авто.</p>
-            </section>
+        </div>
+        </section>
+        <section class="section">
+            <p>Кінцеву ціну маршруту можна дізнатися за допомогою форми замовлення, де Ви зможете обрати початкову
+                та кінцеву адресу, а також клас авто.
+
+                Або можете <button type="button" class="request__button" data-modal-open>залишити заявку</button> на
+                зворотній дзвінок
+
+            </p>
+        </section>
         </div>
     </main>
     <footer class="section footer">
@@ -148,38 +152,38 @@
                     <use href="./images/icons.svg#icon-close-black"></use>
                 </svg>
             </button>
-            <h2 class="modal__title">Оставьте свои данные, мы вам перезвоним</h2>
-            <form class="order-form" autocomplete="on">
-                <div class="order-form__field">
-                    <label for="name" class="order-form__label">Имя</label>
-                    <div class="order-form__position">
-                        <input type="text" id="name" class="order-form__input">
-                        <svg class="order-form__icon" width="18px" height="18px">
+            <h2 class="modal__title">Залиште свої дані і ми Вам передзвонимо</h2>
+            <form class="request" autocomplete="on">
+                <div class="request__field">
+                    <label for="name" class="request__label">Ім'я</label>
+                    <div class="request__position">
+                        <input type="text" id="name" class="request__input">
+                        <svg class="request__icon" width="18px" height="18px">
                             <use href="./images/icons.svg#icon-person-black"></use>
                         </svg>
                     </div>
                 </div>
-                <div class="order-form__field">
-                    <label for="tel" class="order-form__label">Телефон</label>
-                    <div class="order-form__position">
-                        <input type="tel" id="tel" class="order-form__input">
-                        <svg class="order-form__icon" width="18px" height="18px">
+                <div class="request__field">
+                    <label for="tel" class="request__label">Телефон</label>
+                    <div class="request__position">
+                        <input type="tel" id="tel" class="request__input">
+                        <svg class="request__icon" width="18px" height="18px">
                             <use href="./images/icons.svg#icon-phone-black"></use>
                         </svg>
                     </div>
                 </div>
-                <div class="order-form__field">
-                    <label for="email" class="order-form__label">Почта</label>
-                    <div class="order-form__position">
-                        <input type="email" id="email" class="order-form__input">
-                        <svg class="order-form__icon" width="18px" height="18px">
+                <div class="request__field">
+                    <label for="email" class="request__label">Пошта</label>
+                    <div class="request__position">
+                        <input type="email" id="email" class="request__input">
+                        <svg class="request__icon" width="18px" height="18px">
                             <use href="./images/icons.svg#icon-email-black"></use>
                         </svg>
                     </div>
                 </div>
-                <div class="order-form__textarea">
-                    <label for="comment" class="order-form__label">Комментарий</label>
-                    <textarea class="order-form__textarea-input" name="comment" id="comment"
+                <div class="request__textarea">
+                    <label for="comment" class="request__label">Коментар</label>
+                    <textarea class="request__textarea-input" name="comment" id="comment"
                         placeholder="Введите текст"></textarea>
                 </div>
                 <div class="policy">
@@ -190,13 +194,12 @@
                                 <use href="./images/icons.svg#icon-check"></use>
                             </svg>
                         </div>
-                        <p class="policy__terms">Соглашаюсь с рассылкой и принимаю <a class="policy__link"
-                                href="">Условия
-                                договора</a></p>
+                        <p class="policy__terms">Я згоден передати особисті дані<a class="policy__link" href="">
+                            </a></p>
                     </label>
                     </input>
                 </div>
-                <button class="order-form__button-submit" type="submit">Отправить</button>
+                <button class="request__button-submit" type="submit">Надіслати</button>
             </form>
         </div>
     </div>
