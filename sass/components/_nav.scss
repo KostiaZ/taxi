@@ -4,9 +4,22 @@
 }
 
 .nav-menu {
-  @include flexCenter($horizontal: space-between);
-  @media screen and (max-width: 767px) {
-    display: none;
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: $bg-color;
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+    width: auto;
+    @include flexCenter($horizontal: space-between);
+
+  }
+
+  &.is-open {
+    display: block;
   }
 }
 
@@ -30,6 +43,7 @@
   display: flex;
   align-items: center;
   @include effect;
+
   &:hover,
   &:focus {
     color: $accent;
@@ -40,6 +54,7 @@
   margin-right: 7px;
   fill: $font-color;
   @include effect(fill);
+
   .nav-menu__link:hover &,
   .nav-menu__link:focus & {
     fill: $accent;

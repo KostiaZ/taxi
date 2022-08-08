@@ -1,15 +1,23 @@
 .header__button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
   background-color: transparent;
-  border: 0;
-  cursor: pointer;
-  @include effect;
-
-  &:hover,
-  &:focus {
-    background-color: $accent;
-  }
+  border: none;
 
   @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  & .icon-close {
+    display: none;
+  }
+
+  &.is-open .icon-close {
+    display: block;
+  }
+
+  &.is-open .icon-menu {
     display: none;
   }
 }
