@@ -46,6 +46,14 @@ const tripList = [
     trip: 'Дніпро — Кропивницький',
     distance: 250,
   },
+  {
+    trip: 'Дніпро - Суми',
+    distance: 360,
+  },
+  {
+    trip: 'Дніпро - Івано-Фанківськ',
+    distance: 965,
+  },
 ];
 
 const list = document.querySelector('.js-body');
