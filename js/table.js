@@ -1,47 +1,60 @@
-{
-    trip: Дніпро — Київ,
-        std: 8200 грн,
-        comf: 9100 грн,
-        van: ;
-    
-    trip: Дніпро — Харків,
-        std: 3700 грн,
-        comf: 4150 грн,
-        van: ;
-        
-    trip: Дніпро — Одеса,
-        std: 11500 грн,
-        comf: 12850 грн,
-        van: ;
-    
-    trip: Дніпро — Львів,
-        std: 16000 грн,
-        comf: 17900 грн,
-        van: ;
-    
-    trip: Дніпро — Запоріжжя,
-        std: 1450 грн,
-        comf: 1650 грн,
-        van: ;
-    
-    trip: Дніпро — Полтава,
-        std: 3350 грн,
-        comf: 3750 грн,
-        van: ;
-    
-    trip: Дніпро — Кривий Ріг,
-        std: 2500 грн,
-        comf: 2800 грн,
-        van: ;
-    
-    trip: Дніпро — Хмельницький,
-        std: 11900 грн,
-        comf: 13300 грн,
-        van: ;
-    
-    trip: Дніпро — Кропивницький,
-        std: 4200 грн,
-        comf: 4700 грн,
-        van: ;
-}
-{/* <tr><th></th><td></td><td></td></tr> */}
+const std = 17;
+const comf = 19;
+const van = 21;
+const tripList = [
+  {
+    trip: 'Дніпро — Київ',
+    distance: 500,
+  },
+
+  {
+    trip: 'Дніпро — Харків',
+    distance: 220,
+  },
+
+  {
+    trip: 'Дніпро — Одеса',
+    distance: 550,
+  },
+
+  {
+    trip: 'Дніпро — Львів',
+    distance: 950,
+  },
+
+  {
+    trip: 'Дніпро — Запоріжжя',
+    distance: 100,
+  },
+
+  {
+    trip: 'Дніпро — Полтава',
+    distance: 200,
+  },
+
+  {
+    trip: 'Дніпро — Кривий Ріг',
+    distance: 150,
+  },
+
+  {
+    trip: 'Дніпро — Хмельницький',
+    distance: 700,
+  },
+
+  {
+    trip: 'Дніпро — Кропивницький',
+    distance: 250,
+  },
+];
+
+const list = document.querySelector('.js-body');
+const markup = tripList
+  .map(
+    ({ trip, distance }) =>
+      `<tr><th>${trip}</th><td>${std * distance} грн</td><td>${
+        comf * distance
+      } грн</td><td>${van * distance} грн</td></tr>`,
+  )
+  .join('');
+list.insertAdjacentHTML('beforeend', markup);
